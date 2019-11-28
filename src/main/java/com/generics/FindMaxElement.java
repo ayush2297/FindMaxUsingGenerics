@@ -32,36 +32,25 @@ public class FindMaxElement<T> {
     }
 
     public Integer findMaxInt() {
-        Integer max = num1;
-        if ( num2.compareTo(max) > 0 ){
-            max = num2;
-        }
-        if (num3.compareTo(max) > 0){
-            max = num3;
-        }
-        return max;
+        return findMax(num1, num2, num3);
     }
 
     public Float findMaxFloat() {
-        Float fmax = fnum1;
-        if ( fnum2.compareTo(fmax) > 0 ){
-            fmax = fnum2;
-        }
-        if (fnum3.compareTo(fmax) > 0){
-            fmax = fnum3;
-        }
-        return fmax;
+        return findMax(fnum1, fnum2,fnum3);
     }
 
     public String findMaxString() {
-        String smax = str1;
-        if ( str2.compareTo(smax) > 0 ){
-            smax = str2;
-        }
-        if (str3.compareTo(smax) > 0){
-            smax = str3;
-        }
-        return smax;
+        return findMax(str1, str2, str3);
     }
 
+    public <T extends Comparable> T findMax(T elem1, T elem2, T elem3) {
+        T max = elem1;
+        if ( elem2.compareTo(max) > 0 ){
+            max = elem2;
+        }
+        if (elem3.compareTo(max) > 0){
+            max = elem3;
+        }
+        return max;
+    }
 }

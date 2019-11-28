@@ -27,4 +27,10 @@ public class FindMaxElementTest {
     }
 
 
+    @Test
+    public <T> void GivenAnyThreeInputsOfSameDatatype_InThisCaseFloat_ShouldReturnMaxFromThem(){
+        FindMaxElement findMaxElement = new FindMaxElement(2.13f, 5.12f, 1.743f);
+        T max = (T) findMaxElement.findMaxFloat();
+        Assert.assertEquals((Float)5.12f, max );
+    }
 }
