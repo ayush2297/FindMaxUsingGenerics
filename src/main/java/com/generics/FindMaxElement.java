@@ -1,8 +1,6 @@
 package com.generics;
 
-import java.util.Comparator;
-
-public class FindMaxElement {
+public class FindMaxElement<T> {
     private Integer num1;
     private Integer num2;
     private Integer num3;
@@ -15,10 +13,22 @@ public class FindMaxElement {
     private String str2;
     private String str3;
 
-    public void setIntegers(Integer i, Integer j, Integer k) {
-        num1 = i;
-        num2 = j;
-        num3 = k;
+    public FindMaxElement(Integer num1, Integer num2, Integer num3) {
+        this.num1 = num1;
+        this.num2 = num2;
+        this.num3 = num3;
+    }
+
+    public FindMaxElement(String str1, String str2, String str3) {
+        this.str1 = str1;
+        this.str2 = str2;
+        this.str3 = str3;
+    }
+
+    public FindMaxElement(Float fnum1, Float fnum2, Float fnum3) {
+        this.fnum1 = fnum1;
+        this.fnum2 = fnum2;
+        this.fnum3 = fnum3;
     }
 
     public Integer findMaxInt() {
@@ -32,12 +42,6 @@ public class FindMaxElement {
         return max;
     }
 
-    public void setFloats(float num1, float num2, float num3) {
-        this.fnum1 = (Float)num1;
-        this.fnum2 = (Float) num2;
-        this.fnum3 = (Float) num3;
-    }
-
     public Float findMaxFloat() {
         Float fmax = fnum1;
         if ( fnum2.compareTo(fmax) > 0 ){
@@ -49,13 +53,6 @@ public class FindMaxElement {
         return fmax;
     }
 
-    public void setStrings(String str1, String str2, String str3) {
-        this.str1 = str1;
-        this.str2 = str2;
-        this.str3 = str3;
-    }
-
-
     public String findMaxString() {
         String smax = str1;
         if ( str2.compareTo(smax) > 0 ){
@@ -66,4 +63,5 @@ public class FindMaxElement {
         }
         return smax;
     }
+
 }
