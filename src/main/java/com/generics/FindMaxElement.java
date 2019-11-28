@@ -13,10 +13,16 @@ public class FindMaxElement<T extends  Comparable> {
     }
 
     public <T> T testMax() {
-        return (T) testMax(elem1,elem2,elem3);
+        T MaxElement = (T) testMax(elem1,elem2,elem3);
+        printMax(MaxElement);
+        return MaxElement;
     }
 
-    public <T extends Comparable> T testMax(T elem1, T elem2, T elem3) {
+    private <T> void printMax(T printThisMaxElement) {
+        System.out.println("Max element is : "+printThisMaxElement);
+    }
+
+    public static <T extends Comparable> T testMax(T elem1, T elem2, T elem3) {
         T max = elem1;
         if ( elem2.compareTo(max) > 0 ){
             max = elem2;

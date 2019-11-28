@@ -41,5 +41,9 @@ public class FindMaxElementTest {
         Assert.assertEquals("zoo", max );
     }
 
-
+    @Test
+    public void FromTheGivenInputsOfSameDatatype_ShouldPrintAndReturnMaxElement() {
+        FindMaxElement findMaxElement = new FindMaxElement<Integer>(5, 7, 3);
+        findMaxElement.testMax();
+    }
 }
