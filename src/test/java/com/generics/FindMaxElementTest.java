@@ -20,4 +20,13 @@ public class FindMaxElementTest {
         Float max = (Float)findMaxElement.findMaxFloat();
         Assert.assertEquals((Float)7.23f, max);
     }
+
+    @Test
+    public void GivenThreeStrings_ShouldReturnMaxString() {
+        FindMaxElement findMaxElement = new FindMaxElement();
+        findMaxElement.setStrings( "boo", "joo", "zoo" );
+        String max = findMaxElement.findMaxString();
+        Assert.assertEquals("zoo", max);
+    }
+
 }

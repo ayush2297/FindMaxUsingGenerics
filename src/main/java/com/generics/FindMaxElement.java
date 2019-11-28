@@ -11,6 +11,10 @@ public class FindMaxElement {
     private Float fnum2;
     private Float fnum3;
 
+    private String str1;
+    private String str2;
+    private String str3;
+
     public void setIntegers(Integer i, Integer j, Integer k) {
         num1 = i;
         num2 = j;
@@ -45,6 +49,21 @@ public class FindMaxElement {
         return fmax;
     }
 
+    public void setStrings(String str1, String str2, String str3) {
+        this.str1 = str1;
+        this.str2 = str2;
+        this.str3 = str3;
+    }
 
 
+    public String findMaxString() {
+        String smax = str1;
+        if ( str2.compareTo(smax) > 0 ){
+            smax = str2;
+        }
+        if (str3.compareTo(smax) > 0){
+            smax = str3;
+        }
+        return smax;
+    }
 }
