@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.generics.FindMaxElementTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-11-28T12:00:42" hostname="bridgelabz" time="0.004">
+  <properties/>
+  <testcase name="GivenAnyThreeInputsOfSameDatatype_InThisCaseInteger_ShouldReturnMaxFromThem" classname="com.generics.FindMaxElementTest" time="0.002"/>
+  <testcase name="GivenThreeStrings_ShouldReturnMaxString" classname="com.generics.FindMaxElementTest" time="0.0"/>
+  <testcase name="GivenAnyThreeInputsOfSameDatatypeToGenericVariables_InThisCaseString_ShouldReturnMaxFromThem" classname="com.generics.FindMaxElementTest" time="0.001"/>
+  <testcase name="GivenThreeFloats_ShouldReturnMaxFloat" classname="com.generics.FindMaxElementTest" time="0.0"/>
+  <testcase name="GivenThreeIntegers_ShouldReturnMaxInteger" classname="com.generics.FindMaxElementTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

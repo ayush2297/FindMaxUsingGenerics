@@ -7,30 +7,39 @@ public class FindMaxElementTest {
 
     @Test
     public void GivenThreeIntegers_ShouldReturnMaxInteger() {
-        FindMaxElement findMaxElement = new FindMaxElement(1, 7 , 5);
-        Integer max = findMaxElement.findMaxInt();
-        Assert.assertEquals("7", max.toString());
+        FindMaxElement findMaxElement = new FindMaxElement<Integer>(1, 7 , 5);
+        Integer max = (Integer)findMaxElement.testMax();
+        Assert.assertEquals((Integer)7, max);
     }
 
     @Test
     public void GivenThreeFloats_ShouldReturnMaxFloat() {
-        FindMaxElement findMaxElement = new FindMaxElement(1.1f, 7.23f, 5.6f);
-        Float max = (Float)findMaxElement.findMaxFloat();
-        Assert.assertEquals((Float)7.23f, max);
+        FindMaxElement findMaxElement = new FindMaxElement<Float>(1.23f, 7.12f , 5.756f);
+        Float max = (Float)findMaxElement.testMax();
+        Assert.assertEquals((Float)7.12f, max);
     }
 
     @Test
     public void GivenThreeStrings_ShouldReturnMaxString() {
-        FindMaxElement findMaxElement = new FindMaxElement("boo", "joo", "zoo");
-        String max = findMaxElement.findMaxString();
+        FindMaxElement findMaxElement = new FindMaxElement<String>("boo", "joo", "zoo");
+        String max = (String)findMaxElement.testMax();
         Assert.assertEquals("zoo", max);
     }
 
 
     @Test
-    public <T> void GivenAnyThreeInputsOfSameDatatype_InThisCaseFloat_ShouldReturnMaxFromThem(){
-        FindMaxElement findMaxElement = new FindMaxElement(2.13f, 5.12f, 1.743f);
-        T max = (T) findMaxElement.findMaxFloat();
-        Assert.assertEquals((Float)5.12f, max );
+    public <T> void GivenAnyThreeInputsOfSameDatatype_InThisCaseInteger_ShouldReturnMaxFromThem(){
+        FindMaxElement findMaxElement = new FindMaxElement<Integer>(1, 7 , 5);
+        Integer max = (Integer)findMaxElement.testMax();
+        Assert.assertEquals((Integer)7, max);
     }
+
+    @Test
+    public <T> void GivenAnyThreeInputsOfSameDatatypeToGenericVariables_InThisCaseString_ShouldReturnMaxFromThem(){
+        FindMaxElement findMaxElement = new FindMaxElement<String>("boo", "joo", "zoo");
+        String max = (String) findMaxElement.testMax();
+        Assert.assertEquals("zoo", max );
+    }
+
+
 }
