@@ -7,6 +7,10 @@ public class FindMaxElement {
     private Integer num2;
     private Integer num3;
 
+    private Float fnum1;
+    private Float fnum2;
+    private Float fnum3;
+
     public void setIntegers(Integer i, Integer j, Integer k) {
         num1 = i;
         num2 = j;
@@ -23,6 +27,24 @@ public class FindMaxElement {
         }
         return max;
     }
+
+    public void setFloats(float num1, float num2, float num3) {
+        this.fnum1 = (Float)num1;
+        this.fnum2 = (Float) num2;
+        this.fnum3 = (Float) num3;
+    }
+
+    public Float findMaxFloat() {
+        Float fmax = fnum1;
+        if ( fnum2.compareTo(fmax) > 0 ){
+            fmax = fnum2;
+        }
+        if (fnum3.compareTo(fmax) > 0){
+            fmax = fnum3;
+        }
+        return fmax;
+    }
+
 
 
 }

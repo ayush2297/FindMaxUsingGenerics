@@ -13,5 +13,11 @@ public class FindMaxElementTest {
         Assert.assertEquals("7", max.toString());
     }
 
-
+    @Test
+    public void GivenThreeFloats_ShouldReturnMaxFloat() {
+        FindMaxElement findMaxElement = new FindMaxElement();
+        findMaxElement.setFloats(1.1f, 7.23f, 5.6f);
+        Float max = (Float)findMaxElement.findMaxFloat();
+        Assert.assertEquals((Float)7.23f, max);
+    }
 }
