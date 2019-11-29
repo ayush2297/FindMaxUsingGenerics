@@ -1,35 +1,22 @@
 package com.generics;
 
+import java.util.Arrays;
+
 public class FindMaxElement<T extends  Comparable> {
+    T[] valueArr;
 
-    private T elem1;
-    private T elem2;
-    private T elem3;
-
-    public FindMaxElement(T elem1, T elem2, T elem3) {
-        this.elem1 = elem1;
-        this.elem2 = elem2;
-        this.elem3 = elem3;
-    }
-
-    public <T> T testMax() {
-        T MaxElement = (T) testMax(elem1,elem2,elem3);
-        printMax(MaxElement);
-        return MaxElement;
-    }
-
-    private <T> void printMax(T printThisMaxElement) {
-        System.out.println("Max element is : "+printThisMaxElement);
-    }
-
-    public static <T extends Comparable> T testMax(T elem1, T elem2, T elem3) {
-        T max = elem1;
-        if ( elem2.compareTo(max) > 0 ){
-            max = elem2;
+    public FindMaxElement(T... values) {
+        System.out.println();
+        T[] array=(T[]) new Comparable[values.length];
+        int i=0;
+        for(T value : values){
+            array[i++]=value;
         }
-        if (elem3.compareTo(max) > 0){
-            max = elem3;
-        }
-        return max;
+        this.valueArr = array;
+    }
+
+    public T testMax(){
+        Arrays.sort(valueArr);
+        return valueArr[valueArr.length-1];
     }
 }
